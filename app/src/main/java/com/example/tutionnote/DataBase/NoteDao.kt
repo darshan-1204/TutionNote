@@ -1,9 +1,6 @@
 package com.example.tutionnote.DataBase
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface NoteDao {
@@ -16,4 +13,7 @@ interface NoteDao {
 
     @Delete
     fun deleteNote(note: NoteEntity)
+
+    @Update
+    fun updateNote(note: NoteEntity)
 }
